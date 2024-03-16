@@ -20,9 +20,11 @@ public class PlanetServiceTest {
     private PlanetRepository planetRepository;
     @Test
     public void createPlanet_WithValiddate_ReturnsPlanet() {
+        // AAA - Arrange, Act, Assert
         when(planetRepository.save(PLANET)).thenReturn(PLANET);
-        // system under test
+        // ACT
         Planet sut = planetService.create(PLANET);
+        // ASSERT
         assertThat(sut).isEqualTo(PLANET);
 
     }
